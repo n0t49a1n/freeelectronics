@@ -1,0 +1,13 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2023-10-11
+  Changes:
+    - add dependencies correctly for pyanodons, LTN, Cybersyn, Wire Shortcuts, Clusterio
+    - add full conditional option for free electronics per mod loaded
+    - Cleanedup codebase
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2023-7-1
+  Changes:
+    - Intial
+---------------------------------------------------------------------------------------------------

@@ -1,9 +1,10 @@
 {
 	"name": "freeelectronics",
-	"version": "1.0.1",
+	"version": "1.1.1",
 	"title": "Free Electronics",
 	"author": "n0t49a1n",
 	"homepage": "https://mods.factorio.com/mod/freeelectronics",
 	"description": "This mod makes wires, lamps, arithmetic-combinator, decider-combinator, constant-combinator, power-switch, programmable-speaker free.",
-	"factorio_version": "1.1"
+	"factorio_version": "1.1",
+	"dependencies": ["base >= 1.1", "? subspace_storage", "? LTN_Combinator_Modernized", "? cybersyn", "? WireShortcuts", "? pypostprocessing"]
 } 

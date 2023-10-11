@@ -1,64 +1,60 @@
-if data.raw["recipe"]["red-wire"].expensive then
-	data.raw["recipe"]["red-wire"].normal.ingredients = {} 
-	data.raw["recipe"]["red-wire"].expensive.ingredients = {}
+local function clearIngredients(recipe)
+    if recipe and recipe.normal then
+        recipe.normal.ingredients = {}
+        recipe.expensive.ingredients = {}
+    elseif recipe then
+        recipe.ingredients = {}
+    end
 end
 
-if data.raw["recipe"]["green-wire"].normal then
-	data.raw["recipe"]["green-wire"].normal.ingredients = {} 
-	data.raw["recipe"]["green-wire"].expensive.ingredients = {}
+if "arithmetic-combinator" then
+	clearIngredients(data.raw["recipe"]["arithmetic-combinator"])
+end
+if "decider-combinator" then
+clearIngredients(data.raw["recipe"]["decider-combinator"])
+end
+if "constant-combinator" then
+clearIngredients(data.raw["recipe"]["constant-combinator"])
+end
+if "power-switch" then
+clearIngredients(data.raw["recipe"]["power-switch"])
+end
+if "programmable-speaker" then
+clearIngredients(data.raw["recipe"]["programmable-speaker"])
 end
 
-if data.raw["recipe"]["arithmetic-combinator"].normal then
-	data.raw["recipe"]["arithmetic-combinator"].normal.ingredients = {} 
-	data.raw["recipe"]["arithmetic-combinator"].expensive.ingredients = {}
-end
-
-if data.raw["recipe"]["decider-combinator"].normal then
-	data.raw["recipe"]["decider-combinator"].normal.ingredients = {} 
-	data.raw["recipe"]["decider-combinator"].expensive.ingredients = {}
-end
-
-if data.raw["recipe"]["constant-combinator"].normal then
-	data.raw["recipe"]["constant-combinator"].normal.ingredients = {} 
-	data.raw["recipe"]["constant-combinator"].expensive.ingredients = {}
-end
-
-if data.raw["recipe"]["power-switch"].normal then
-	data.raw["recipe"]["power-switch"].normal.ingredients = {} 
-	data.raw["recipe"]["power-switch"].expensive.ingredients = {}
-end
-
-if data.raw["recipe"]["programmable-speaker"].normal then
-	data.raw["recipe"]["programmable-speaker"].normal.ingredients = {} 
-	data.raw["recipe"]["programmable-speaker"].expensive.ingredients = {}
-end
-
-if data.raw["recipe"]["small-lamp"].normal then
-	data.raw["recipe"]["small-lamp"].normal.ingredients = {} 
-	data.raw["recipe"]["small-lamp"].expensive.ingredients = {}
-end
-
-data.raw["recipe"]["red-wire"].ingredients = {} 
-data.raw["recipe"]["green-wire"].ingredients = {}
-data.raw["recipe"]["arithmetic-combinator"].ingredients = {}
-data.raw["recipe"]["decider-combinator"].ingredients = {}
-data.raw["recipe"]["constant-combinator"].ingredients = {}
-data.raw["recipe"]["power-switch"].ingredients = {}
-data.raw["recipe"]["programmable-speaker"].ingredients = {}
-data.raw["recipe"]["small-lamp"].ingredients = {}
-
-if mods["LTN_Combinator_Modernized"] then
-	if data.raw["recipe"]["ltn-combinator"].normal then
-		data.raw["recipe"]["ltn-combinator"].normal.ingredients = {} 
-		data.raw["recipe"]["ltn-combinator"].expensive.ingredients = {}
+if not mods["WireShortcuts"] then
+    if "red-wire" then
+		clearIngredients(data.raw["recipe"]["red-wire"])
 	end
-	data.raw["recipe"]["ltn-combinator"].ingredients = {}
+    if "green-wire" then
+		clearIngredients(data.raw["recipe"]["green-wire"])
+	end
+end
+
+if not mods["pypostprocessing"] then
+    if "small-lamp" then
+		clearIngredients(data.raw["recipe"]["small-lamp"])
+	end
+end
+
+if not mods["LTN_Combinator_Modernized"] then
+	if "ltn-combinator" then
+		clearIngredients(data.raw["recipe"]["ltn-combinator"])
+	end
 end
 
 if mods["subspace_storage"] then
-	if data.raw["recipe"]["subspace-resource-combinator"].normal then
-		data.raw["recipe"]["subspace-resource-combinator"].normal.ingredients = {} 
-		data.raw["recipe"]["subspace-resource-combinator"].expensive.ingredients = {}
+    if "subspace-resource-combinator" then
+		clearIngredients(data.raw["recipe"]["subspace-resource-combinator"])
 	end
-	data.raw["recipe"]["subspace-resource-combinator"].ingredients = {}
+end
+
+if mods["cybersyn"] then
+    if "cybersyn-combinator" then
+		clearIngredients(data.raw["recipe"]["cybersyn-combinator"])
+	end
+    if "cybersyn-constant-combinator" then
+		clearIngredients(data.raw["recipe"]["cybersyn-constant-combinator"])
+	end
 end
