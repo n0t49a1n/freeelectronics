@@ -61,7 +61,7 @@ if not mods["pypostprocessing"] then
     order = "h",
   }})
 end
-if not mods["LTN_Combinator_Modernized"] then
+if mods["LTN_Combinator_Modernized"] then
   data:extend({{
     type = "bool-setting",
     name = "ltn-combinator",
@@ -69,7 +69,7 @@ if not mods["LTN_Combinator_Modernized"] then
     default_value = true,
     order = "i",
   }})
- end
+end
 if mods["subspace_storage"] then
   data:extend({{
     type = "bool-setting",

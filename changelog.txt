@@ -1,13 +1,23 @@
+ ---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 2023-10-11
+
+  Bugfixes:
+    - typo to fix incorrect display of LTN in settings and recipe
+
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2023-10-11
-  Changes:
+
+  Major Features:
     - add dependencies correctly for pyanodons, LTN, Cybersyn, Wire Shortcuts, Clusterio
-    - add full conditional option for free electronics per mod loaded
+    - add full conditional option for free electronics per mod loaded  
+  Bugfixes:
     - Cleanedup codebase
+
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
-Date: 2023-7-1
-  Changes:
+Date: 2023-01-27
+
+  Features:
     - Intial
----------------------------------------------------------------------------------------------------

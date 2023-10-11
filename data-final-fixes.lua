@@ -38,7 +38,7 @@ if not mods["pypostprocessing"] then
 	end
 end
 
-if not mods["LTN_Combinator_Modernized"] then
+if mods["LTN_Combinator_Modernized"] then
 	if "ltn-combinator" then
 		clearIngredients(data.raw["recipe"]["ltn-combinator"])
 	end
